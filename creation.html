@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>creation</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Créer un compte</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Identifiant" required> 
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input id="pass" type="password" placeholder="Mot de passe" required>
+                <i id="show" class='bx bxs-lock-alt' onClick="changer()"></i>
+            </div>
+
+            <button type="submit" class="btn">Créer un compte</button>
+            <div class="register-link">
+                <p>Vous avez déjà un compte?<a href="./connexion.html"> S'identifier</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        let e= true;
+        const changer = ()=>{
+            console.log("oui");
+            if (e){
+                document.getElementById("pass").setAttribute("type","text");
+                document.getElementById("show").setAttribute("class","bx bxs-lock-open-alt")
+                e = false;
+            }
+            else{
+                document.getElementById("pass").setAttribute("type","password");
+                document.getElementById("show").setAttribute("class","bx bxs-lock-alt")
+                e = true;
+            }
+        }
+    </script>
+</body>
+</html>
